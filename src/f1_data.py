@@ -1,6 +1,7 @@
 import os
 import pickle
 import sys
+import logging
 from datetime import timedelta, date
 from multiprocessing import Pool, cpu_count
 
@@ -146,6 +147,7 @@ def _process_single_driver(args):
 
 def load_session(year, round_number, session_type="R"):
     # session_type: 'R' (Race), 'S' (Sprint) etc.
+    logging.getLogger("fastf1").setLevel(logging.CRITICAL)#permanently silencing fastf1 logger
     session = fastf1.get_session(year, round_number, session_type)
     session.load(telemetry=True, weather=True)
     return session
