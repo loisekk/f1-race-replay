@@ -1,14 +1,35 @@
+# FastF1 cache (large SQLite DB)
+.fastf1-cache/
 
-venv/
+# Graphify transient cache
+graphify-out/cache/
 
+# Output files
 output_animation.mp4
-.fastf1-cache
 still_frame.png
 
-.mypy_cache/
-__pycache__/
-
+# Computed data
 computed_data/
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+
+# OpenCode config (user-specific)
+.opencode/
+
+# OS
 .DS_Store
-.idea
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
